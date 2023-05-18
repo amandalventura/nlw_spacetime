@@ -20,6 +20,17 @@
   background-color: #9e9ea0;
 }
 
+@keyframes entering {
+  from { 
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 body {
   background-color: #121215;
   color: #EAEAEA;
@@ -37,6 +48,7 @@ nav {
   grid-area: timeline;
 
   overflow-y: scroll;
+  animation: entering 0.7s ease-in-out;
 }
 
 .memory {
@@ -100,6 +112,10 @@ aside {
   background-position: top right;
   background-repeat: no-repeat;
   background-size: auto 100%;
+}
+
+aside * {
+  animation: entering 0.7s ease-in-out;
 }
 
 aside img:nth-child(2) {
